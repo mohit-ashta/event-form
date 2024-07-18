@@ -22,13 +22,14 @@ const EventForm = () => {
 
   const onSubmit = (data) => {
     dispatch(addEvent(data));
+    alert("Event Successfully added");
     methods.reset();
   };
   return (
     <>
       <section className="py-3 ">
         <div className="container px-4 mx-auto">
-          <div className="p-8 bg-zinc-800 rounded-xl">
+          <div className="p-8 bg-[#4e4e54] rounded-xl">
             <div className="flex flex-wrap items-center justify-between -mx-4 mb-8 pb-6 border-b border-gray-400 border-opacity-20">
               <h4 className="text-2xl font-bold tracking-wide text-white mb-1">
                 Event Form
@@ -53,7 +54,7 @@ const EventForm = () => {
                       <div className="flex flex-wrap -mx-4 -mb-10">
                         <div className="w-full md:w-1/3 px-4 mb-10">
                           <div className="relative w-full h-14 py-4 px-3 border border-gray-400 hover:border-white focus-within:border-green-500 rounded-lg">
-                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-zinc-800">
+                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-[#4e4e54]">
                               Event Name
                             </span>
 
@@ -65,13 +66,13 @@ const EventForm = () => {
                           </div>
                           {errors.name && (
                             <small className="text-red-500">
-                            {errors.name.message}
+                              {errors.name.message}
                             </small>
                           )}
                         </div>
                         <div className="w-full md:w-1/3 px-4 mb-10">
                           <div className="relative w-full h-14 py-4 px-3 border border-gray-400 hover:border-white focus-within:border-green-500 rounded-lg">
-                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-zinc-800">
+                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-[#4e4e54]">
                               Organisation
                             </span>
 
@@ -83,13 +84,13 @@ const EventForm = () => {
                           </div>
                           {errors.organisation && (
                             <small className="text-red-500">
-                            {errors.organisation.message}
+                              {errors.organisation.message}
                             </small>
                           )}
                         </div>
                         <div className="w-full md:w-1/3 px-4 mb-10">
                           <div className="relative w-full h-14 py-4 px-3 border border-gray-400 hover:border-white focus-within:border-green-500 rounded-lg">
-                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-zinc-800">
+                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-[#4e4e54]">
                               Sub-Events
                             </span>
 
@@ -103,7 +104,7 @@ const EventForm = () => {
                           </div>
                           {errors.subEventsCount && (
                             <small className="text-red-500">
-                            {errors.subEventsCount.message}
+                              {errors.subEventsCount.message}
                             </small>
                           )}
                         </div>
@@ -123,7 +124,7 @@ const EventForm = () => {
                       <div className="flex flex-wrap -mx-4 -mb-10">
                         <div className="w-full md:w-1/2 px-4 mb-10">
                           <div className="relative w-full h-14 py-4 px-3 border border-gray-400 hover:border-white focus-within:border-green-500 rounded-lg">
-                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-zinc-800">
+                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-[#4e4e54]">
                               Start Date
                             </span>
 
@@ -135,13 +136,13 @@ const EventForm = () => {
                           </div>
                           {errors.startDate && (
                             <small className="text-red-500">
-                            {errors.startDate.message}
+                              {errors.startDate.message}
                             </small>
                           )}
                         </div>
                         <div className="w-full md:w-1/2 px-4 mb-10">
                           <div className="relative w-full h-14 py-4 px-3 border border-gray-400 hover:border-white focus-within:border-green-500 rounded-lg">
-                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-zinc-800">
+                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-[#4e4e54]">
                               End Date
                             </span>
 
@@ -153,13 +154,13 @@ const EventForm = () => {
                           </div>
                           {errors.endDate && (
                             <small className="text-red-500">
-                            {errors.endDate.message}
+                              {errors.endDate.message}
                             </small>
                           )}
                         </div>
                         <div className="w-full md:w-1/2 px-4 mb-10">
                           <div className="relative block px-3 w-full font-medium border border-gray-400 hover:border-white focus-within:border-green-500 rounded-lg">
-                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-zinc-800">
+                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-[#4e4e54]">
                               Event Type
                             </span>
                             <span className="absolute top-1/2 right-0 mr-5 transform -translate-y-1/2">
@@ -170,33 +171,33 @@ const EventForm = () => {
                               className="w-full py-4 text-gray-50 font-semibold appearance-none bg-transparent outline-none"
                               {...register("eventType", { required: true })}
                             >
-                              <option className="bg-zinc-800" hidden></option>
-                              <option className="bg-zinc-800" value="sports">
+                              <option className="bg-[#4e4e54]" hidden></option>
+                              <option className="bg-[#4e4e54]" value="sports">
                                 Sports
                               </option>
-                              <option className="bg-zinc-800" value="music">
+                              <option className="bg-[#4e4e54]" value="music">
                                 Music
                               </option>
-                              <option className="bg-zinc-800" value="general">
+                              <option className="bg-[#4e4e54]" value="general">
                                 General
                               </option>
-                              <option className="bg-zinc-800" value="school">
+                              <option className="bg-[#4e4e54]" value="school">
                                 School
                               </option>
-                              <option className="bg-zinc-800" value="children">
+                              <option className="bg-[#4e4e54]" value="children">
                                 Children
                               </option>
                             </select>
                           </div>
                           {errors.eventType && (
                             <small className="text-red-500">
-                            {errors.eventType.message}
+                              {errors.eventType.message}
                             </small>
                           )}
                         </div>
                         <div className="w-full md:w-1/2 px-4 mb-10">
                           <div className="relative w-full h-14 py-4 px-3 border border-gray-400 hover:border-white focus-within:border-green-500 rounded-lg">
-                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-zinc-800">
+                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-[#4e4e54]">
                               Handled By
                             </span>
 
@@ -208,13 +209,13 @@ const EventForm = () => {
                           </div>
                           {errors.handledBy && (
                             <small className="text-red-500">
-                            {errors.handledBy.message}
+                              {errors.handledBy.message}
                             </small>
                           )}
                         </div>
                         <div className="w-full px-4 mb-10">
                           <div className="relative w-full h-14 py-4 px-3 border border-gray-400 hover:border-white focus-within:border-green-500 rounded-lg">
-                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-zinc-800">
+                            <span className="absolute bottom-full left-0 ml-3 -mb-1 transform translate-y-0.5 text-xs font-semibold text-gray-300 px-1 bg-[#4e4e54]">
                               Description
                             </span>
 
@@ -226,7 +227,7 @@ const EventForm = () => {
                           </div>
                           {errors.description && (
                             <small className="text-red-500">
-                            {errors.description.message}
+                              {errors.description.message}
                             </small>
                           )}
                         </div>
